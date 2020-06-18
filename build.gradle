@@ -1,0 +1,50 @@
+project.ext.lwjglVersion = "3.1.0"
+project.ext.jomlVersion = "1.9.25"
+project.ext.lwjglNatives = "natives-windows"
+
+apply plugin:'java'
+compileJava.options.encoding = compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.lwjgl:lwjgl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-bgfx:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-egl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-glfw:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-jawt:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-jemalloc:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-lmdb:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-nanovg:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-nfd:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-nuklear:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-openal:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-opencl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-opengl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-opengles:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-ovr:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-par:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-sse:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-stb:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-tinyfd:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-vulkan:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-xxhash:$lwjglVersion"
+    runtimeOnly "org.lwjgl:lwjgl:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-bgfx:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-jemalloc:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-lmdb:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-nanovg:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-nfd:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-nuklear:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-openal:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-ovr:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-par:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-sse:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-tinyfd:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-xxhash:$lwjglVersion:$lwjglNatives"
+    implementation "org.joml:joml:${jomlVersion}"
+}
